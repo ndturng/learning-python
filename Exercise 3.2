@@ -1,0 +1,17 @@
+h = input('Enter Hours: ')
+
+
+try:
+  h = float(h)
+  r = input('Enter Rate: ') 
+  try:  
+    r = float(r)
+    if h > 40:
+        pay = (h - 40) * r * 1.5 + 40 * r
+    else:
+        pay = (h) * (r)
+    print('Pay:', pay)
+  except:
+    print('Error, please enter numeric input')
+except:
+    print('Error, please enter numeric input')
