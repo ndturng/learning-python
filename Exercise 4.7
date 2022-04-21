@@ -1,0 +1,25 @@
+def computegrade(x):
+    if x >= 0.9:
+        g = 'A'
+    elif x >= 0.8:
+        g = 'B'
+    elif x >= 0.7:
+        g = 'C' 
+    elif x >= 0.6:
+        g = 'D'
+    else: 
+        g = 'F'
+    return g
+
+try:
+    x = input('Enter score: ')
+    x = float(x)
+    if 0.0 <= x and x <= 1.0:
+        g = computegrade(x)
+        print(g)
+        print('type of grade:', type(g))
+    else:
+        print('Bad score')
+        
+except:
+    print('Bad score')
