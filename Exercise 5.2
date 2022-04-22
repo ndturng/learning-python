@@ -1,0 +1,21 @@
+c = 0
+t = 0
+max = None
+min = None
+
+while True:
+    n = input('Enter a number:')
+    if n == 'done':
+        print(t, c, min, max)
+        break
+    try:
+        n = float(n)
+    except:
+        print('Invalid input')
+        continue
+    c = c + 1
+    t = t + int(n)
+    if min == None or min > n:
+        min = int(n)
+    if max == None or max < n:
+        max = int(n)
