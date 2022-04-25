@@ -1,0 +1,6 @@
+str = 'X-DSPAM-Confidence: 0.8475 '
+space_1 = str.find(' ')
+space_2 = str.find(' ',space_1 + 1)
+
+num = float(str[space_1+1:space_2])
+print(num, type(num))
