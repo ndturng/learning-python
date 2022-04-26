@@ -1,0 +1,15 @@
+f_name = input('Enter the file name: ')
+
+try:
+    f_open = open(f_name)
+    count = 0
+
+    for line in f_open:
+        count = count + 1
+        
+    print('There were 1797 subject lines in',f_name)
+except:
+    if f_name == 'na na boo boo':
+        print('NA NA BOO BOO TO YOU - You have been punkd!')
+    else:     
+        print('File cannot be opened:',f_name)
