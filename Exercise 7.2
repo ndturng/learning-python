@@ -1,0 +1,16 @@
+f_name = input('Enter the file name: ')
+
+try:
+    f_open = open(f_name)
+    count = 0
+    count_spam = 0
+    for line in f_open:
+        if line.startswith('X-DSPAM-Confidence'):
+            count = count + 1
+            space = line.find(': ')
+            spam_confidence = line[space+1:]
+            count_spam = float(spam_confidence) + count_spam
+
+    print('Average spam confidence:',count_spam/count)
+except:
+    print('File not found!')
