@@ -1,0 +1,17 @@
+def chop(t):
+    a = len(t)
+    del t[a-1]
+    del t[0]
+    return t
+
+def middle(t):
+    try:
+        c = len(t)
+        d = t[:1] + t[c-1:c]
+        print(d)
+    except:
+        print('oop!')
+t = [1, 4, 6, 8, 9]
+
+chop(t)
+print(t)
